@@ -12,7 +12,7 @@ pageClass: routes
 
 ### 分类
 
-<Route author="nczitzk" example="/199it/category/199itdata" path="/199it/category/:caty" :paramsDesc="['分类, 可在分类页 URL 中找到']">
+<Route author="nczitzk" example="/199it/category/199itdata" path="/199it/category/:caty" :paramsDesc="['分类，可在分类页 URL 中找到']">
 
 分类为单一路径，如 `http://www.199it.com/archives/category/199itdata` 则路由为 `/199it/category/199itdata`.
 
@@ -22,7 +22,7 @@ pageClass: routes
 
 ### 标签
 
-<Route author="nczitzk" example="/199it/tag/数据早报" path="/199it/tag/:tag" :paramsDesc="['标签, 可在标签页 URL 中找到']"/>
+<Route author="nczitzk" example="/199it/tag/数据早报" path="/199it/tag/:tag" :paramsDesc="['标签，可在标签页 URL 中找到']"/>
 
 ## 36kr
 
@@ -659,7 +659,7 @@ Tag
 
 ### 话题
 
-<Route author="brilon" example="/infoq/topic/1" path="/infoq/topic/:id" :paramsDesc="['话题id，可在[InfoQ全部话题](https://www.infoq.cn/topics)页面找到URL里的话题id']" />
+<Route author="brilon" example="/infoq/topic/1" path="/infoq/topic/:id" :paramsDesc="['话题id，可在 [InfoQ全部话题](https://www.infoq.cn/topics) 页面找到URL里的话题id']" />
 
 ## IT 之家
 
@@ -1272,6 +1272,52 @@ IPFS 网关有可能失效，那时候换成其他网关。
 
 </Route>
 
+## The News Lens 關鍵評論
+
+### 最新
+
+<Route author="nczitzk" example="/thenewslens/latest-article" path="/thenewslens/latest-article/:sort?" :paramsDesc="['排序方式，见下表，可在对应排序页 URL 中找到']">
+
+| 最新文章 | 最多觀看 | 最多分享   | 本日        | 本週       | 本月        | 今年       | 去年           | 有史以來        |
+| ---- | ---- | ------ | --------- | -------- | --------- | -------- | ------------ | ----------- |
+|      | hot  | social | hot/today | hot/week | hot/month | hot/year | hot/lastYear | hot/history |
+
+</Route>
+
+### 新闻
+
+<Route author="nczitzk" example="/thenewslens/news" path="/thenewslens/news/:sort?" :paramsDesc="['排序方式，见下表，可在对应排序页 URL 中找到']">
+
+| 最新文章 | 最多觀看 | 最多分享   |
+| ---- | ---- | ------ |
+|      | hot  | social |
+
+</Route>
+
+### 作者
+
+<Route author="nczitzk" example="/thenewslens/author/BBC" path="/thenewslens/author/:id/:sort?" :paramsDesc="['作者 id，可在对应作者页 URL 中找到', '排序方式，同上表，可在对应排序页 URL 中找到']" />
+
+### 分类
+
+<Route author="nczitzk" example="/thenewslens/category/politics" path="/thenewslens/category/:id/:sort?" :paramsDesc="['分类 id，可在对应分类页 URL 中找到', '排序方式，同上表，可在对应排序页 URL 中找到']" />
+
+### 标签
+
+<Route author="nczitzk" example="/thenewslens/tag/中國" path="/thenewslens/tag/:id/:sort?" :paramsDesc="['标签 id，可在对应标签页 URL 中找到', '排序方式，同上表，可在对应排序页 URL 中找到']" />
+
+### 频道
+
+<Route author="nczitzk" example="/thenewslens/channel/hk" path="/thenewslens/channel/:id/:sort?" :paramsDesc="['标签 id，可在对应标签页 URL 中找到', '排序方式，同上表，可在对应排序页 URL 中找到']" />
+
+### 评论
+
+<Route author="nczitzk" example="/thenewslens/review" path="/thenewslens/review/:sort?" :paramsDesc="['排序方式，同上表，可在对应排序页 URL 中找到']" />
+
+### 影音
+
+<Route author="nczitzk" example="/thenewslens/videos/Projects" path="/thenewslens/videos/Projects/:sort?" :paramsDesc="['排序方式，同上表，可在对应排序页 URL 中找到']" />
+
 ## The Partnership on AI
 
 ### Resources
@@ -1444,9 +1490,19 @@ Supported sub-sites:
 
 ## 白鲸出海
 
-### 首页最新帖子
+### 最新
 
-<Route author="jeffcottLu" example="/baijing" path="/baijing"></Route>
+<Route author="jeffcottLu nczitzk" example="/baijing" path="/baijing" />
+
+### 资讯
+
+<Route author="nczitzk" example="/baijing/1" path="/baijing/:type?" :paramsDesc="['分类 id，见下表，默认为最新文章']">
+
+| 最新文章 | 7×24h | 干货 | 专栏 | 手游 | 跨境电商 | 投融资 | 数据报告 | 智能手机 | 活动 |
+| ---- | ----- | -- | -- | -- | ---- | --- | ---- | ---- | -- |
+|      | 1     | 2  | 4  | 3  | 5    | 10  | 9    | 7    | 6  |
+
+</Route>
 
 ## 百度知道日报
 

@@ -345,11 +345,19 @@ GitHub 官方也提供了一些 RSS:
 
 <Route author="Weilet" example="/go-weekly" path="/go-weekly"/>
 
+### 招聘
+
+<Route author="CcccFz" example="/studygolang/jobs" path="/studygolang/jobs" radar="1" rssbud="1"/>
+
 ## GoCN
 
 ### 文章
 
-<Route author="AtlanCI" example="/gocn" path="/gocn"/>
+<Route author="AtlanCI CcccFz" example="/gocn" path="/gocn" radar="1" rssbud="1"/>
+
+### 招聘
+
+<Route author="CcccFz" example="/gocn/jobs" path="/gocn/jobs" radar="1" rssbud="1"/>
 
 ## Hacker News
 
@@ -446,6 +454,10 @@ GitHub 官方也提供了一些 RSS:
 ### 打卡
 
 <Route author="NathanDai" example="/leetcode/submission/us/nathandai" path="/leetcode/submission/:country/:user" :paramsDesc="['国家 country, 中国(cn)和美国(us)', '用户名 user, 可在LeetCode用户主页的 URL 中找到']"/>
+
+### 每日一题
+
+<Route author="NavePnow" example="/leetcode/dailyquestion/en" path="/leetcode/dailyquestion/:lang" :paramsDesc="['站点,中文(cn)和英文(en)']"/>
 
 ## LinkedKeeper
 
@@ -605,6 +617,12 @@ GitHub 官方也提供了一些 RSS:
 ### react-native
 
 <Route author="xixi" example="/react/react-native-weekly" path="/react/react-native-weekly" />
+
+## Rust 语言中文社区
+
+### 招聘
+
+<Route author="CcccFz" example="/rustcc/jobs" path="/rustcc/jobs" radar="1" rssbud="1"/>
 
 ## Scala
 
